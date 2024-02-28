@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <locale.h>
+
+void cabecalho () {
+	system("cls || clear");
+	printf("\n === SENAI ===");
+	fflush(stdin);
+}
+int main() {
+	setlocale(LC_ALL, "");
+	float priNumero, segNumero, media, soma, produto, menNumero, MaiNumero;
+	
+	printf("Digite o primeiro número: ");
+	scanf("%f",&priNumero);
+	printf("Digite o segundo número: ");
+	scanf("%f",&segNumero);
+	
+	media = (priNumero + segNumero) / 2;
+	soma = priNumero + segNumero;
+	produto = priNumero * segNumero;
+	
+	if (priNumero > segNumero) {
+		MaiNumero = priNumero;
+		menNumero = segNumero;
+		} else {
+			MaiNumero = segNumero;
+			menNumero = priNumero;
+	}
+	printf("\nPrimeiro número: %f \n", priNumero);
+	printf("\nSegundo número: %f \n", segNumero);
+	printf("\nValor da soma: %f \n", soma);
+	printf("\nValor da multiplicação: %f \n", produto);
+	printf("\Média: %f \n", media);
+	
+	return 0;
+}
